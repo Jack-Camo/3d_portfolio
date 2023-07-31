@@ -1,9 +1,43 @@
-import React from 'react'
+import {Suspense, useEffect, useState} from 'react';
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
+
+import CanvasLoader from '../Loader';
+
+// Use three-fiber docs for more info (useful like bootstrap)
 
 const Computers = () => {
+  const computer = useGLTF('./desktop_pc/scene.gltf') // Imports asset from filepath
+
   return (
-    <div>Computers</div>
+    <mesh>
+      <hemisphereLight intensity={0.15} groundColor='black'/>
+      <pointLight intensity={1} />
+      <primitive object={computer.scene} />
+    </mesh>
   )
 }
 
-export default Computers
+const ComputersCanvas = () => {
+  return (
+    <Canvas
+      frameLoop="demand"
+      shadows
+      camera={{ position: [20, 3, 5], fov: 25 }}
+      gl={{preserveDrawingBuffer: true}}
+    >
+      <Suspense fallback={<CanvasLoader />}>
+        <OrbitControls
+          enableZoom={false} 
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 2}
+        /> {/* Allows for spinning the model*/}
+        <Computers />
+      </Suspense>
+
+      <Preload all />
+    </Canvas>
+  )
+}
+
+export default ComputersCanvas;
