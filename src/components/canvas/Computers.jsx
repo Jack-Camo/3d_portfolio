@@ -21,7 +21,7 @@ const Computers = () => {
 const ComputersCanvas = () => {
   return (
     <Canvas
-      frameLoop="demand"
+      frameloop="demand"
       shadows
       camera={{ position: [20, 3, 5], fov: 25 }}
       gl={{preserveDrawingBuffer: true}}
@@ -31,10 +31,9 @@ const ComputersCanvas = () => {
           enableZoom={false} 
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
-        /> {/* Allows for spinning the model*/}
+        />
         <Computers />
       </Suspense>
-
       <Preload all />
     </Canvas>
   )
