@@ -6,19 +6,55 @@ import CanvasLoader from '../Loader';
 
 // Use three-fiber docs for more info (useful like bootstrap)
 
-const Computers = () => {
+const Computers = ( isMobile ) => {
   const computer = useGLTF('./desktop_pc/scene.gltf') // Imports asset from filepath
 
   return (
     <mesh>
-      <hemisphereLight intensity={0.15} groundColor='black'/>
+      <hemisphereLight intensity={1} groundColor='black'/>
       <pointLight intensity={1} />
-      <primitive object={computer.scene} />
+      <spotLight 
+        position={[-20, 50, 10]}
+        angle={0.12}
+        penumbra={1}
+        intensity={1}
+        castShadow
+        shadow-mapSize={1024}
+      />
+      <primitive 
+        object={computer.scene} 
+        scale={isMobile ? 0.7 : 0.75}
+        position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
+        rotation={[-0.01, -0.2, -0.1]}
+      />
     </mesh>
   )
 }
 
 const ComputersCanvas = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Checks if mobile device - changes isMobile variable
+  useEffect(() => {
+    // Add a lister for changes to the screen size
+    const mediaQuery = window.matchMedia('(max-width: 500px)');
+
+    // Set the initial state of isMobile
+    setIsMobile(mediaQuery.matches)
+
+    // Define a callback function to handle changes to the screen size (mediaQuery)
+    const handleMediaQueryChange = (event) => {
+      setIsMobile(event.matches);
+    }
+    // Add the callback function as a listener to the mediaQuery event
+    mediaQuery.addEventListener('change', handleMediaQueryChange);
+
+    // Remove the listener when the component is unmounted
+    return () => {
+      mediaQuery.removeEventListener('change', handleMediaQueryChange);
+    }
+  }, [])
+
   return (
     <Canvas
       frameloop="demand"
@@ -32,7 +68,7 @@ const ComputersCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <Computers />
+        <Computers isMobile={isMobile}/>
       </Suspense>
       <Preload all />
     </Canvas>
