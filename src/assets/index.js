@@ -25,6 +25,11 @@ import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
+import blueprint from "./company/blueprint.png"
+import kadapt from "./company/kadapt.png"
+import cancer_research from "./company/cancer_research.png"
+import mcdonalds from "./company/mcdonalds.png"
+import whitewater from "./company/whitewater.png"
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -59,4 +64,9 @@ export {
   carrent,
   jobit,
   tripguide,
+  blueprint,
+  kadapt,
+  mcdonalds,
+  cancer_research,
+  whitewater,
 };
