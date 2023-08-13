@@ -143,7 +143,7 @@ import {
       company_name: "McDonald's",
       icon: mcdonalds,
       iconBg: "#E6DEDD",
-      date: "",
+      date: "July 2022 - Jun 2023",
       points: [
         "Working as a team in a high-intensity kitchen serving food.",
         "Interacting with a range of different people from all backgrounds.",
