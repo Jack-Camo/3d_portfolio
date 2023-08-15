@@ -20,6 +20,11 @@ import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
+import cplusplus from "./tech/c_plus_plus.png";
+import python from "./tech/python.png";
+import java from "./tech/java.png";
+import csharp from "./tech/c_sharp.png";
+import postgresql from "./tech/postgresql.png";
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -69,4 +74,9 @@ export {
   mcdonalds,
   cancer_research,
   whitewater,
+  cplusplus,
+  python,
+  java,
+  csharp,
+  postgresql,
 };

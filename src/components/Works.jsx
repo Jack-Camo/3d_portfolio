@@ -69,7 +69,9 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
-          Overall description of projects goes here.
+          The following projects showcase my skills and experience through
+          real-world examples of my work. Each card includes a brief description of 
+          the project with a link to the code repositroy attached.
         </motion.p>
       </div>
 

@@ -1,3 +1,4 @@
+import { p } from "maath/dist/misc-7d870b3c.esm";
 import {
     mobile,
     backend,
@@ -24,6 +25,11 @@ import {
     jobit,
     tripguide,
     threejs,
+    cplusplus,
+    python,
+    java,
+    csharp,
+    postgresql,
   } from "../assets";
   
   export const navLinks = [
@@ -62,6 +68,22 @@ import {
   
   const technologies = [
     {
+      name: "C#",
+      icon: csharp,
+    },
+    {
+      name: "Python",
+      icon: python,
+    },
+    {
+      name: "JavaScript",
+      icon: javascript,
+    },
+    {
+      name: "Java",
+      icon: java,
+    },
+    {
       name: "HTML 5",
       icon: html,
     },
@@ -70,8 +92,8 @@ import {
       icon: css,
     },
     {
-      name: "JavaScript",
-      icon: javascript,
+      name: "C++",
+      icon: cplusplus,
     },
     {
       name: "TypeScript",
@@ -82,36 +104,12 @@ import {
       icon: reactjs,
     },
     {
-      name: "Redux Toolkit",
-      icon: redux,
-    },
-    {
-      name: "Tailwind CSS",
-      icon: tailwind,
-    },
-    {
-      name: "Node JS",
-      icon: nodejs,
-    },
-    {
-      name: "MongoDB",
-      icon: mongodb,
-    },
-    {
-      name: "Three JS",
-      icon: threejs,
+      name: "PostgreSQL",
+      icon: postgresql,
     },
     {
       name: "git",
       icon: git,
-    },
-    {
-      name: "figma",
-      icon: figma,
-    },
-    {
-      name: "docker",
-      icon: docker,
     },
   ];
   
@@ -123,7 +121,9 @@ import {
       iconBg: "#E6DEDD",
       date: "Jun 2023 - Present",
       points: [
-
+        "Full-stack web development.",
+        "Collaborative working in a software development team.",
+        "Designing and developing intuitive user interfaces.",
       ],
     },
     {
@@ -205,58 +205,16 @@ import {
   
   const projects = [
     {
-      name: "Car Rent",
+      name: "Portfolio Website",
       description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        "A personal web portfolio built using React, enriched with engaging animations and 3D models crafted through the Three.js library. This project showcases a dynamic website where visitors can explore a collection of work in an interactive and visually appealing manner.",
       tags: [
         {
           name: "react",
           color: "blue-text-gradient",
         },
         {
-          name: "mongodb",
-          color: "green-text-gradient",
-        },
-        {
-          name: "tailwind",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: carrent,
-      source_code_link: "https://github.com/",
-    },
-    {
-      name: "Job IT",
-      description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-      tags: [
-        {
-          name: "react",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "restapi",
-          color: "green-text-gradient",
-        },
-        {
-          name: "scss",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: jobit,
-      source_code_link: "https://github.com/",
-    },
-    {
-      name: "Trip Guide",
-      description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-      tags: [
-        {
-          name: "nextjs",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "supabase",
+          name: "javascript",
           color: "green-text-gradient",
         },
         {
@@ -264,8 +222,8 @@ import {
           color: "pink-text-gradient",
         },
       ],
-      image: tripguide,
-      source_code_link: "https://github.com/",
+      image: carrent,
+      source_code_link: "https://github.com/Jack-Camo/3d_portfolio",
     },
   ];
   
