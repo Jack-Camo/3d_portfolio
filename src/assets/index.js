@@ -8,37 +8,24 @@ import menu from "./menu.svg";
 import close from "./close.svg";
 
 import css from "./tech/css.png";
-import docker from "./tech/docker.png";
-import figma from "./tech/figma.png";
 import git from "./tech/git.png";
 import html from "./tech/html.png";
 import javascript from "./tech/javascript.png";
-import mongodb from "./tech/mongodb.png";
-import nodejs from "./tech/nodejs.png";
 import reactjs from "./tech/reactjs.png";
-import redux from "./tech/redux.png";
-import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
-import threejs from "./tech/threejs.svg";
 import cplusplus from "./tech/c_plus_plus.png";
 import python from "./tech/python.png";
 import java from "./tech/java.png";
 import csharp from "./tech/c_sharp.png";
 import postgresql from "./tech/postgresql.png";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
 import blueprint from "./company/blueprint.png"
 import kadapt from "./company/kadapt.png"
 import cancer_research from "./company/cancer_research.png"
 import mcdonalds from "./company/mcdonalds.png"
 import whitewater from "./company/whitewater.png"
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import portfolio from "./portfolio-screenshot.png";
 
 export {
   logo,
@@ -50,25 +37,11 @@ export {
   menu,
   close,
   css,
-  docker,
-  figma,
   git,
   html,
   javascript,
-  mongodb,
-  nodejs,
   reactjs,
-  redux,
-  tailwind,
   typescript,
-  threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
-  carrent,
-  jobit,
-  tripguide,
   blueprint,
   kadapt,
   mcdonalds,
@@ -79,4 +52,5 @@ export {
   java,
   csharp,
   postgresql,
+  portfolio,
 };
